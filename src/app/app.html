@@ -1,0 +1,25 @@
+@if (visible) {
+   <h2>  {{title}} </h2>
+
+  @if (users != undefined && users.length > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; index as i">
+          <td>{{i+1}}</td>
+          <td>{{user}}</td>
+        </tr>
+      </tbody>
+    </table>
+  } @else {
+    <p> There are not users</p>
+  }
+} @else {
+  <p> Not visible </p>
+}
+
