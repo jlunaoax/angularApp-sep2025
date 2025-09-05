@@ -14,4 +14,8 @@ export class App {
   users: string[] = ['Jose', 'Javier', 'Mar']
   //users!: string[];
   visible: boolean = false;
+
+  toggle() {
+    this.visible = !this.visible;
+  }
 }
